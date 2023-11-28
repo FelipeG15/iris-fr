@@ -1,0 +1,21 @@
+<div class="row justify-content-center">
+    @if (show) {
+    <ngb-toast class="mt-3" [autohide]="false">
+        <div class="form-check form-check-inline pt-2">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" (change)="completeTask()"
+                [(ngModel)]="completed">
+            <label class="form-check-label" for="inlineCheckbox2">
+                <h6>{{title}}</h6>
+            </label>
+        </div>
+        <div class="pb-1 float-end">
+            <button class="btn" type="button" id="button-addon2" (click)="close()"><svg class="closeIcon"
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                </svg></button>
+        </div>
+    </ngb-toast>
+    }
+</div>
